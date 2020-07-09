@@ -10,6 +10,12 @@ As an art collector, I want a virtual art gallery app that displays works of art
 based on an artist's name using the Artsy API. I can view current works by that artist for sale on eBay 
 as I browse, and save galleries I enjoy to view or share later.  
 
+## Goals
+````
+Phase 1: A working gallery app that can retrieve artwork with AJAX request and display them to the page 
+Phase 2: Link the application to eBay's API to find similar artwork for sale
+Phase 3: Ability to share collection with others
+````
 
 ## Acceptance Criteria:
 ````
