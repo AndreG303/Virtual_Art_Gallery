@@ -1,17 +1,17 @@
-#RUTGERS Coding Bootcamp
-#Group Project #1
-#7/8/2020
+## RUTGERS Coding Bootcamp
+## Group Project #1
+## 7/8/2020
 
-#Names: Jacqueline Smith, Joseph Luca, Andrea Gamez, Nicholas La Monaco
+## Names: Jacqueline Smith, Joseph Luca, Andrea Gamez, Nicholas La Monaco
 
-#User Story:
+## User Story:
 
 As an art collector, I want a virtual art gallery app that displays works of art in a dynamic gallery 
 based on an artist's name using the Artsy API. I can view current works by that artist for sale on eBay 
 as I browse, and save galleries I enjoy to view or share later.  
 
 
-#Acceptance Criteria:
+## Acceptance Criteria:
 
 GIVEN that I want to display my art collection virtually
 WHEN I visit the page I can view a list of artists I like
