@@ -23,4 +23,4 @@ THEN I can see that specific artwork up close
 WHEN I have a particular collection I enjoy
 THEN I can save it for later or find if it's for sale
 
-![Art Gallery Mockup](proposal.png)
+![Art Gallery Mockup](/proposal.png)
