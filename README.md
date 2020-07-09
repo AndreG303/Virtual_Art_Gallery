@@ -23,4 +23,5 @@ THEN I can see that specific artwork up close
 WHEN I have a particular collection I enjoy
 THEN I can save it for later or find if it's for sale
 
-![Art Gallery Mockup](/proposal.png)
+![image](https://user-images.githubusercontent.com/65572319/86984233-01d35300-c15c-11ea-8fa2-6973b576178a.png)
+
