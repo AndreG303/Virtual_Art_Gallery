@@ -20,5 +20,5 @@ function renderButtons() {
       // Added the button to the artists button div
       $("#artistName").append(a);
     }
-  };
+  };  
 
