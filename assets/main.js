@@ -1,6 +1,7 @@
 // Default Artist Buttons
 var artists = ["Leonardo DaVinci", "Michaelangelo", "Pablo Picasso", "Monet"]
 
+
 //Function that adds default artists to the page on load
 function renderButtons() {
 
@@ -23,4 +24,23 @@ function renderButtons() {
   }  
 
   renderButtons();
+
+  $("#add").on("click", function(event) {
+    event.preventDefault();
+    var artist = $("#artistName").val().trim();
+    console.log (artist);
+    // Then dynamicaly generates buttons for each artist in the array
+    var a = $("<button>");
+    // Adds a class of artist to our button
+    a.addClass("artist");
+    // Added a data-attribute
+    a.attr("data-name", artist);
+    // Provided the initial button text
+    a.text(artist);
+    // Added the button to the artists button div
+    $("#nameBtn").append(a);
+    
+
+
+  });
 
