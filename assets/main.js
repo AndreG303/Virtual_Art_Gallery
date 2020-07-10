@@ -5,7 +5,7 @@ var artists = ["Leonardo DaVinci", "Michaelangelo", "Pablo Picasso", "Monet"]
 function renderButtons() {
 
     // Deletes the artists prior to adding new movies
-    $("#artistName").empty();
+    $("#nameBtn").empty();
     // Loops through the array of artists
     for (var i = 0; i < artists.length; i++) {
 
@@ -18,7 +18,9 @@ function renderButtons() {
       // Provided the initial button text
       a.text(artists[i]);
       // Added the button to the artists button div
-      $("#artistName").append(a);
+      $("#nameBtn").append(a);
     }
-  };  
+  }  
+
+  renderButtons();
 
