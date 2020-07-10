@@ -43,9 +43,12 @@ function renderButtons() {
 
 
   });
-  // $("#clear").on("click", function(event) {
-  //   localStorage.clear();
-  //   .empty;
-  // })
+  $("#clear").on("click", function(event) {
+    event.preventDefault();
+    // localStorage.empty();
+    $("#nameBtn").empty();
+   
+   
+  })
 
 
