@@ -4,7 +4,7 @@ var cards = ["Black Lotus", "Time Walk", "Timetwister", "Mox Sapphire", "Chaos O
 //Function that adds default artists to the page on load
 function renderButtons() {
 
-  // Deletes the artists prior to adding new movies
+  // Deletes the card name prior to adding
   $("#nameBtn").empty();
   // Loops through the array of artists
   for (var i = 0; i < cards.length; i++) {
@@ -43,15 +43,46 @@ function addAndSearchButton(event) {
   getCard(cardName);
 };
 
+//Display Card Art when Button up top is clicked:
+function cardButton() {
+
+  var cardName = $(this).attr("data-name");
+  var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+// Defines the cardart response as a variable
+var cardArt = response.image_uris.art_crop;
+// defines card name as a variable
+var named = response.name
+// Creates an image Element
+var image = $("<img>").attr("src", cardArt);
+// Puts the card art in that element
+$("#cardGallery").html(image);
+// displays the name of the card below the image:
+var nametag = $("<p>").text(response.name);
+// Appends the title of the card below the artwork
+$("#cardGallery").append(nametag)
+//Stores artist name as a variable
+var credit = $("<p>").text("Artist: " + response.artist);
+//Appends the Artist credit next to the artwork's name
+$("#cardGallery").append(credit)
+// console.log(response);
+
+  });
+}
+
 // Function to clear buttons
 $("#clear").on("click", function (event) {
   event.preventDefault();
   $("#nameBtn").empty();
 });
 
-// Function to display card art and name to the gallery div when the button up top is clicked
+$(document).on("click", ".card", cardButton);
 
-// AJAX request to get a card artwork based on user input 
+// AJAX request to get a card artwork based on user input, create a button and display it to the page
 function getCard(cardName) {
   var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName
 
@@ -78,8 +109,6 @@ function getCard(cardName) {
     // console.log(response);
   });
 
-  
-//RANDOM BUTTON:
 // click Function to grab a card name and art at random, and display it to the page
 }
 function getRandom(event) {
@@ -105,9 +134,10 @@ function getRandom(event) {
 });
 
 }
+
+// RANDOM BUTTON:
 $("#random").on("click", getRandom);
 
 // SAVE BUTTON:
 //click function to create a button at the top based on what is being displayed in the gallery
-$("#save").on("click", addAndSearchButton);
-//Needs a data-name? or 
+//Needs a data-name? or what?
