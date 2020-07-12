@@ -21,16 +21,14 @@ function renderButtons() {
   }
 }
 
-
-
 renderButtons();
 var cardName = " ";
 
 // Adds buttons to the page
 $("#add").on("click", addAndSearchButton);
 
-function addAndSearchButton(event){
-event.preventDefault();
+function addAndSearchButton(event) {
+  event.preventDefault();
   cardName = $("#cardName").val().trim();
   // Then dynamicaly generates buttons for each artist in the array
   var a = $("<button>");
@@ -46,38 +44,43 @@ event.preventDefault();
 };
 
 // Function to clear buttons
-$("#clear").on("click", function(event) {
+$("#clear").on("click", function (event) {
   event.preventDefault();
   $("#nameBtn").empty();
 });
 
-function getCard(cardName){
+// AJAX request to get a card artwork based on user input 
+function getCard(cardName) {
   var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      // Defines the cardart as a variable
-      var cardArt = response.image_uris.art_crop;
-      // defines card name as a variable
-      var named = response.name
-      // Creates an image Element
-      var image = $("<img>").attr("src", cardArt);
-      // Putting the card art on the page
-      $("#cardGallery").html(image);
-      // display the name of the card below the image:
-      // ***CODE GOES HERE***
-      console.log(response.name);
-    });
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+    // Defines the cardart response as a variable
+    var cardArt = response.image_uris.art_crop;
+    // defines card name as a variable
+    var named = response.name
+    // Creates an image Element
+    var image = $("<img>").attr("src", cardArt);
+    // Puts the card art in that element
+    $("#cardGallery").html(image);
+    // displays the name of the card below the image:
+    var nametag = $("<p>").text(response.name);
+    // Appends the title of the card below the artwork
+    $("#cardGallery").append(nametag)
+    //Stores artist name as a variable
+    var credit = $("<p>").text("Artist: " + response.artist);
+    //Appends the Artist credit next to the artwork's name
+    $("#cardGallery").append(credit)
+    // console.log(response);
+  });
 
-    // Function to display card art and name to the gallery div when the button up top is clicked
+  // Function to display card art and name to the gallery div when the button up top is clicked
 
-    // click Function to grab a card name and art at random, and display it to the page
-    // This is in the docs api.scryfall.com
+  // click Function to grab a card name and art at random, and display it to the page
+  // This is in the docs api.scryfall.com
 
-    //click function to create a button at the top based on what is being displayed in the gallery
-    
+  //click function to create a button at the top based on what is being displayed in the gallery
+
 }
-
-
