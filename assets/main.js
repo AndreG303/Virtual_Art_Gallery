@@ -49,6 +49,8 @@ $("#clear").on("click", function (event) {
   $("#nameBtn").empty();
 });
 
+// Function to display card art and name to the gallery div when the button up top is clicked
+
 // AJAX request to get a card artwork based on user input 
 function getCard(cardName) {
   var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName
@@ -76,11 +78,36 @@ function getCard(cardName) {
     // console.log(response);
   });
 
-  // Function to display card art and name to the gallery div when the button up top is clicked
-
-  // click Function to grab a card name and art at random, and display it to the page
-  // This is in the docs api.scryfall.com
-
-  //click function to create a button at the top based on what is being displayed in the gallery
+  
+//RANDOM BUTTON:
+// click Function to grab a card name and art at random, and display it to the page
+}
+function getRandom(event) {
+  $.ajax({
+  url: "https://api.scryfall.com/cards/random",
+  method: "GET"
+}).then(function (response) {
+  var cardArt = response.image_uris.art_crop;
+  // defines card name as a variable
+  var named = response.name
+  // Creates an image Element
+  var image = $("<img>").attr("src", cardArt);
+  // Puts the card art in that element
+  $("#cardGallery").html(image);
+  // displays the name of the card below the image:
+  var nametag = $("<p>").text(response.name);
+  // Appends the title of the card below the artwork
+  $("#cardGallery").append(nametag)
+  //Stores artist name as a variable
+  var credit = $("<p>").text("Artist: " + response.artist);
+  //Appends the Artist credit next to the artwork's name
+  $("#cardGallery").append(credit)
+});
 
 }
+$("#random").on("click", getRandom);
+
+// SAVE BUTTON:
+//click function to create a button at the top based on what is being displayed in the gallery
+$("#save").on("click", addAndSearchButton);
+//Needs a data-name? or 
