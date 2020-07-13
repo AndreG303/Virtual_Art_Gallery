@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Our Stylesheet -->
-  <link rel="stylesheet" href="assets/style.css">
   <!-- Our Script -->
   <script src="assets/main.js" defer></script>
   <!-- JQuery -->
@@ -13,16 +12,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css\style.css">
 
   <title>Virtual Gallery</title>
 </head>
 
 <body>
   <!-- This is the header -->
-  <div>
-    <header style="background-image: url('assets/hero-magic-card-ob.png');" alt="crystal ball" class="responsive">
-      <h1 class="center-align" style="color: thistle;">My Card Art Collection</h1>
-    </header>
+  <nav style="background-image: url('assets/hero-magic-card-ob.png'); min-height: 300px;"alt="crystal ball"class="nav-extended">
+      <h1 class="center-align">My Card Art Collection</h1>
+  </nav>
   </div>
   </div>
   </div>
@@ -48,10 +47,14 @@
   <section>
     <h2>eBay Search Results</h2>
   </section>
-</body>
 <!-- eBay results go here -->
 <div id="ebay"></div>
 </div>
 </div>
-<div id = "footer" style="color:turquoise;" class="center-align"><h1>&#169; 2020</h1>
+<footer class="page-footer">
+  <div class="container">
+  <h5>© 2014 Copyright Text</h5>
+  </div>
+</footer>
+</body>
 </html>
