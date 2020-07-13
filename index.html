@@ -1,22 +1,36 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Our Stylesheet -->
-    <link rel="stylesheet" href="assets/style.css">
-    <!-- Our Script -->
-    <script src="assets/main.js" defer></script>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Virtual Card Art Binder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Our Script -->
+  <script src="assets/main.js" defer></script>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <link rel="stylesheet" href="css\style.css">
+
+  <title>Virtual Gallery</title>
 </head>
+
 <body>
-<!-- This is the header -->
-<header><h1>My Card Art Collection</h1></header>
-<!-- Artist name buttons go here -->
-<div id="nameBtn"></div>
-<!-- The artist search function -->
-<form>
+  <!-- This is the header -->
+  <nav style="background-image: url('assets/hero-magic-card-ob.png'); min-height: 300px;"alt="crystal ball"class="nav-extended">
+      <h1 class="center-align">My Card Art Collection</h1>
+  </nav>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- Artist name buttons go here -->
+  <div id="nameBtn"></div>
+  <!-- The artist search function -->
+  <form>
     <div>
       <label for="cardname">Enter a Card Name:</label>
       <input type="text" id="cardName" placeholder="Mana Vault">
@@ -24,15 +38,24 @@
     <button type="add" id="add">Add</button>
     <button type="clear" id="clear">Clear</button>
   </form>
-<!-- The images appear here -->
-<div id="cardGallery"></div>
-<!-- Save Button -->
-<button type="save">SAVE</button>
-<!-- Random Button -->
-<button type="random">RANDOM</button>
-<!-- eBay header -->
-<section><h2>eBay Search Results</h2></section>
-</body>
+  <!-- The images appear here -->
+  <div id="cardGallery"></div>
+  <!-- Save Button -->
+  <button id="save">SAVE</button>
+  <!-- Random Button -->
+  <button id="random">RANDOM</button>
+  <!-- eBay header -->
+  <section>
+    <h2>eBay Search Results</h2>
+  </section>
 <!-- eBay results go here -->
 <div id="ebay"></div>
+</div>
+</div>
+<footer class="page-footer">
+  <div class="container">
+  <h5>© 2014 Copyright Text</h5>
+  </div>
+</footer>
+</body>
 </html>
