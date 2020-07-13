@@ -1,0 +1,17 @@
+header{
+font-family: sans-serif;
+height: 500px;
+background-position: center;
+}
+
+.responsive{
+ max-width: 100%;
+ height: 100px;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+  

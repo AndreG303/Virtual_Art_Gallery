@@ -1,38 +1,57 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Our Stylesheet -->
-    <link rel="stylesheet" href="assets/style.css">
-    <!-- Our Script -->
-    <script src="assets/main.js" defer></script>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Virtual Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Our Stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Our Script -->
+  <script src="assets/main.js" defer></script>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <title>Virtual Gallery</title>
 </head>
+
 <body>
-<!-- This is the header -->
-<header><h1>My Art Collection</h1></header>
-<!-- Artist name buttons go here -->
-<div id="nameBtn"></div>
-<!-- The artist search function -->
-<form>
+  <!-- This is the header -->
+  <div>
+    <header style="background-image: url('assets/hero-magic-card-ob.png');" alt="crystal ball" class="responsive">
+      <h1 class="center-align" style="color: thistle;">My Card Art Collection</h1>
+    </header>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- Artist name buttons go here -->
+  <div id="nameBtn"></div>
+  <!-- The artist search function -->
+  <form>
     <div>
-      <label for="artistname">Enter an Artist Name:</label>
-      <input type="text" id="artistName" placeholder="Michaelangelo">
+      <label for="cardname">Enter a Card Name:</label>
+      <input type="text" id="cardName" placeholder="Mana Vault">
     </div>
-    <button type="add">Add</button>
-    <button type="clear">Clear</button>
+    <button type="add" id="add">Add</button>
+    <button type="clear" id="clear">Clear</button>
   </form>
-<!-- The images appear here -->
-<div id="gallery"></div>
-<!-- Previous, Save, and Next buttons -->
-<button type="prev">Previous</button>
-<button type="save">SAVE</button>
-<button type="next">Next</button>
-<!-- eBay header -->
-<section><h2>eBay Search Results</h2></section>
+  <!-- The images appear here -->
+  <div id="cardGallery"></div>
+  <!-- Save Button -->
+  <button id="save">SAVE</button>
+  <!-- Random Button -->
+  <button id="random">RANDOM</button>
+  <!-- eBay header -->
+  <section>
+    <h2>eBay Search Results</h2>
+  </section>
 </body>
 <!-- eBay results go here -->
 <div id="ebay"></div>
+</div>
+</div>
+<div id = "footer" style="color:turquoise;" class="center-align"><h1>&#169; 2020</h1>
 </html>
