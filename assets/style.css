@@ -1,0 +1,17 @@
+.container {
+    background-color: rgba(148, 143, 162, 0.6);  
+}
+
+h2 {
+    color: #3d1c43;
+}
+
+.btn {
+    color: rgba(50, 103, 111, 0.8);
+}
+
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+}

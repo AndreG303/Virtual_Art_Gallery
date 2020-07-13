@@ -23,35 +23,63 @@
   <nav style="background-image: url('assets/hero-magic-card-ob.png'); min-height: 300px;"alt="crystal ball"class="nav-extended">
       <h1 class="center-align">My Card Art Collection</h1>
   </nav>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- Artist name buttons go here -->
-  <div id="nameBtn"></div>
-  <!-- The artist search function -->
-  <form>
-    <div>
-      <label for="cardname">Enter a Card Name:</label>
-      <input type="text" id="cardName" placeholder="Mana Vault">
+  <div style="background-image: url('assets/images/magic-bg.png'); background-size: cover; background-repeat: no-repeat; align-items: center;">
+    <div class="container">
+    <div class="row">
+      <div class="col s12"></div>
+      <!-- Page Content goes here -->
+      <div id="nameBtn">
+      </div>
     </div>
-    <button type="add" id="add">Add</button>
-    <button type="clear" id="clear">Clear</button>
-  </form>
+  </div>
+ 
+  <!-- Page Content goes here -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <form>
+          <div>
+            <!-- input for card name -->
+             <!-- The artist search function -->
+            <label for="cardname">
+              <h2 class="center-align">Enter a Card Name:</h2>
+            </label>
+            <input type="text" id="cardName" placeholder="Card Name or Artist goes here :-)">
+            <button type="add" class="btn waves-effect waves-light" id="add">Add</button>
+            <button type="clear" class="btn waves-effect waves-light" id="clear">Clear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- The images appear here -->
+  <div class="container">
+  <div class="row">
+    <div class="col s12">
   <div id="cardGallery"></div>
-  <!-- Save Button -->
-  <button id="save">SAVE</button>
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col s12"> 
+      <div class="center-align"> 
+<!-- Save Button -->
+  <button type="save" class="btn waves-effect waves-light">SAVE</button>
   <!-- Random Button -->
-  <button id="random">RANDOM</button>
+  <button type="random"class="btn waves-effect waves-light">RANDOM</button>
   <!-- eBay header -->
+</div>
+</div>
+</div>
+</div>
   <section>
-    <h2>eBay Search Results</h2>
+    <h2 class="center-align">eBay Search Results</h2>
+    <!-- eBay results go here -->
+    <div id="ebay"></div>
   </section>
-<!-- eBay results go here -->
-<div id="ebay"></div>
-</div>
-</div>
+  </div>
+  </body>
 <footer class="page-footer">
   <div class="container">
   <h5>© 2014 Copyright Text</h5>
