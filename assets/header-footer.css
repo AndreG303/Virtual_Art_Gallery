@@ -1,0 +1,44 @@
+/* header{
+font-family: sans-serif;
+height: 500px;
+background-position: center;
+max-width: 100%;
+ height: 100px;
+}
+
+body{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+}
+
+.page-footer{
+background-color:turquoise;
+color: black;
+text-align: center;
+margin-top: 20px;
+} */
+
+.site-width-limit {
+    max-width: 900px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hero {
+    min-height: 300px;
+    width: 100%;
+    background-image: url("./hero-magic-card-ob.png");
+    background-repeat: no-repeat;
+}
+
+.main-nav {
+    background-color: rgba(50, 103,111);
+}
+
+.main-header {
+   
+    z-index: 100;
+}
