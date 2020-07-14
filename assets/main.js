@@ -1,6 +1,9 @@
 // Default Artist Buttons
 var cards = ["Black Lotus", "Time Walk", "Timetwister", "Mox Sapphire", "Chaos Orb"]
 
+// ADD CLASS TO BUTTONS
+// class=“btn waves-effect waves-light”
+
 //Function that adds default artists to the page on load
 function renderButtons() {
 
@@ -30,7 +33,7 @@ $("#add").on("click", addAndSearchButton);
 function addAndSearchButton(event) {
   event.preventDefault();
   cardName = $("#cardName").val().trim();
-  // Then dynamicaly generates buttons for each artist in the array
+  // Then dynamically generates buttons for each artist in the array
   var a = $("<button>");
   // Adds a class of artist to our button
   a.addClass("card");
