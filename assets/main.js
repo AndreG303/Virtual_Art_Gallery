@@ -80,7 +80,9 @@ function getRandom(event) {
     method: "GET"
   }).then(function (response) {
     viewArt(response)
-  });
+  }).then(function (response) {
+    giphyArt(response);
+  })
 }
 
 // RANDOM BUTTON:
@@ -119,3 +121,26 @@ function viewArt(artwork) {
   // appends the Artist credit below the artwork's name
   $("#cardGallery").append(credit)
 };
+
+//function to call giphy API
+function giphyArt(argument) {
+  var b = argument;
+  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + b;
+  // ajax GET request to queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    //data response from ajax request
+    .then(function (response) {
+      // saves the image in variable 
+      var imageUrl = response.data.image_original_url;
+      // creates an image tag 
+      var artImage = $("<img>");
+      // creates attributes source and alt to the image 
+      artImage.attr({ "src": imageURL, "alt": "art image" });
+      // appends the giphy image to the card gallery
+      $("#cardGallery").append(artImage);
+    });
+}
