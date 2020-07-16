@@ -1,17 +1,35 @@
-.container {
-    background-color: rgba(148, 143, 162, 0.6);  
-}
-
 h2 {
-    color: #3d1c43;
+  color: ivory;
+  align-items: center;
 }
 
 .btn {
-    color: rgba(50, 103, 111, 0.8);
+  color: ivory;
 }
 
 body {
-display: flex;
-min-height: 100vh;
-flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+    font-size: xx-large;
+    color: ivory;
+}
+
+p {
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+form {
+  background-color: ivory;
+  padding: 10px;
 }
