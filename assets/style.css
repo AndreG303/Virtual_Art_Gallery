@@ -1,0 +1,35 @@
+h2 {
+  color: ivory;
+  align-items: center;
+}
+
+.btn {
+  color: ivory;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+    font-size: xx-large;
+    color: ivory;
+}
+
+p {
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+form {
+  background-color: ivory;
+  padding: 10px;
+}
