@@ -2,7 +2,7 @@
 
 
 
-var queryURL = v216v9311p5ls8s
+var queryURL = "v216v9311p5ls8"
 
 // function getTrump(){
 // $.ajax({
