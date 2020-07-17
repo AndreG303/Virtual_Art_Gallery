@@ -4,6 +4,11 @@
 
 ## Names: Jacqueline Smith, Joseph Luca, Andrea Gamez, Nicholas La Monaco
 
+## Link to Project
+
+https://nlamonaco86.github.io/Virtual_Art_Gallery/
+
+
 ## User Story:
 
 As a collector of Magic the Gathering Cards, I want a virtual art gallery app that displays works of art from the cards in a dynamic gallery based on the object in the art or the card name. I can then in turn save the art to my dropbox account as I browse, and save pictures I enjoy to view or share later.  
