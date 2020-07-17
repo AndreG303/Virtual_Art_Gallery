@@ -8,7 +8,8 @@
   <script src="assets/main.js" defer></script>
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="v216v9311p5ls8s"></script>
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs"
+    data-app-key="v216v9311p5ls8s"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
@@ -22,66 +23,68 @@
 
 <body>
   <!-- This is the header -->
-  
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <!-- Page Content goes here -->
-          <div id="nameBtn">
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
 
-    <!-- Page Content goes here -->
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <form>
-              <!-- input for card name -->
-              <!-- The artist search function -->
-              <label id="cardname">Enter a Card Name:</label>
-              <input type="text" id="cardName" placeholder="">
-              <button class="btn waves-effect waves-light" id="add">Add</button>
-              <button class="btn waves-effect waves-light" id="clear">Clear</button>
-          </form>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <!-- Page Content goes here -->
+        <div id="nameBtn">
         </div>
       </div>
     </div>
-  
-    <!-- The images appear here -->
-    <div class="container">
-      <div class="row">
-        <div class="col l12">
-          <div id="cardGallery"></div>
+  </div>
+  </div>
+
+  <!-- Page Content goes here -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <form>
+          <!-- input for card name -->
+          <!-- The artist search function -->
+          <label id="cardname">Enter a Card Name:</label>
+          <input type="text" id="cardName" placeholder="">
+          <button class="btn waves-effect waves-light" id="add">Add</button>
+          <button class="btn waves-effect waves-light" id="clear">Clear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- The images appear here -->
+  <div class="container">
+    <div class="row">
+      <div class="col l12">
+        <div id="cardGallery"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="center-align">
+          <!-- Save Button -->
+          <button id="save" class="btn waves-effect waves-light">SAVE</button>
+          <!-- Random Button -->
+          <button id="random" class="btn waves-effect waves-light">RANDOM</button>
+          <!-- eBay header -->
         </div>
       </div>
     </div>
+  </div>
+  <section>
     <div class="container">
       <div class="row">
         <div class="col s12">
+          <h2 class="center-align">Drop into your Drop Box</h2>
+          <!-- eBay results go here -->
           <div class="center-align">
-            <!-- Save Button -->
-            <button id="save" class="btn waves-effect waves-light">SAVE</button>
-            <!-- Random Button -->
-            <button id="random" class="btn waves-effect waves-light">RANDOM</button>
-            <!-- eBay header -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <h2 class="center-align">Drop into your Drop Box</h2>
-            <!-- eBay results go here -->
             <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 </body>
 
