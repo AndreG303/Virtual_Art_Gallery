@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+  overflow: scroll;
+}
+
 h2 {
   color: ivory;
   align-items: center;
@@ -13,25 +18,34 @@ body {
   flex-direction: column;
   background-color: black;
 }
-
+#cardGallery {
+  background-color: ivory;
+  color: black;
+  
+}
+.l12 {
+  text-align: center;
+}
 .container {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  align-items: center;
 }
 
 label {
-    font-size: xx-large;
-    color: ivory;
+  font-size: xx-large;
+  color: ivory;
 }
 
 p {
-    font-weight: bolder;
-    font-size: 10px;
+  font-weight: bolder;
+  font-size: 10px;
 }
 
 form {
   background-color: ivory;
-  padding: 10px;
+  padding: 5px;
 }
 a {
   align-items: center;
