@@ -137,10 +137,15 @@ function giphyArt(argument) {
       var imageURL = response.data.image_original_url;
       // creates an image tag 
       var artImage = $("<img>");
+      //Giphy Title
+      var giphyTitle = $("<h5");
       // creates attributes source and alt to the image 
       artImage.attr({ "src": imageURL, "alt": "art image" });
       // appends the giphy image to the card gallery
       $("#cardGallery").append(artImage);
-      console.log("it ran")
+      //Adds the GIPHY's name to the element
+      giphyTitle.text("This is a GIPHY of " + response.title)
+      //Adds the title element to the page
+      $("cardGallery").append(giphyTitle)
     });
 }
