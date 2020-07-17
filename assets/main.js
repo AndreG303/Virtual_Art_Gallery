@@ -131,16 +131,16 @@ function giphyArt(argument) {
     url: queryURL,
     method: "GET"
   })
-
     //data response from ajax request
     .then(function (response) {
       // saves the image in variable 
-      var imageUrl = response.data.image_original_url;
+      var imageURL = response.data.image_original_url;
       // creates an image tag 
       var artImage = $("<img>");
       // creates attributes source and alt to the image 
       artImage.attr({ "src": imageURL, "alt": "art image" });
       // appends the giphy image to the card gallery
       $("#cardGallery").append(artImage);
+      console.log("it ran")
     });
 }
