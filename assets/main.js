@@ -138,7 +138,7 @@ function giphyArt(argument) {
       // creates an image tag 
       var artImage = $("<img>");
       //Giphy Title
-      var giphyTitle = $("<h5");
+      var giphyTitle = $("<p">);
       // creates attributes source and alt to the image 
       artImage.attr({ "src": imageURL, "alt": "art image" });
       // appends the giphy image to the card gallery
