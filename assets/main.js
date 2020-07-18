@@ -125,7 +125,7 @@ function viewArt(artwork) {
 //function to call giphy API
 function giphyArt(argument) {
   var b = argument;
-  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + b;
+  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=TZ05HR1k0nG0a7TtBdZsZHDkvmpheiTn&tag=" + b;
   // ajax GET request to queryURL
   $.ajax({
     url: queryURL,
@@ -144,9 +144,9 @@ function giphyArt(argument) {
       // appends the giphy image to the card gallery
       $("#cardGallery").append(artImage);
       //Adds the GIPHY's name to the element
-      giphyTitle.text("This is a GIPHY of " + response.title)
+      giphyTitle.text("This is a GIPHY of " + response.data.title)
       //Adds the title element to the page
-      $("cardGallery").append(giphyTitle)
-      console.log(response)
+      $("giphyName").append(giphyTitle)
+      // console.log(response.title)
     });
 }
