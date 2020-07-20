@@ -1,5 +1,5 @@
 // default artwork buttons
-var cards = ["Black Lotus", "Time Walk", "Timetwister", "Mox Sapphire", "Chaos Orb"]
+var cards = ["Black Lotus", "Time Walk", "Timetwister", "Mox Sapphire", "Chaos Orb"];
 
 // function that adds default artworks to the page on load
 function renderButtons() {
@@ -37,7 +37,7 @@ function addAndSearchButton(event) {
   // adds the button to the button div
   $("#nameBtn").append(art);
   getCard(cardName);
-};
+}
 
 // display card art when Button up top is clicked:
 function cardButton() {
@@ -49,7 +49,7 @@ function cardButton() {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    viewArt(response)
+    viewArt(response);
   });
 }
 
@@ -63,26 +63,27 @@ $(document).on("click", ".card", cardButton);
 
 // AJAX request to get a card artwork based on user input, create a button and display it to the page
 function getCard(cardName) {
-  var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName
+  var queryURL = "https://api.scryfall.com/cards/named?fuzzy=" + cardName;
 
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    viewArt(response)
+    viewArt(response);
   });
 }
 
 // click function to grab a card name and art at random, and display it to the page
 function getRandom(event) {
+  event.preventDefault();
   $.ajax({
     url: "https://api.scryfall.com/cards/random",
     method: "GET"
   }).then(function (response) {
-    viewArt(response)
+    viewArt(response);
   }).then(function (response) {
     giphyArt(response);
-  })
+  });
 }
 
 // RANDOM BUTTON:
@@ -103,7 +104,7 @@ function saveArt(event) {
   // added the button to the artists button div
   $("#nameBtn").append(art);
   getCard(cardName);
-};
+}
 
 //Function to grab artwork from the database, and add it to the page
 function viewArt(artwork) {
@@ -115,12 +116,12 @@ function viewArt(artwork) {
   // makes a nametag for the artwork title
   var nametag = $("<h4>").text(artwork.name);
   // puts that nametag below the artwork
-  $("#cardGallery").append(nametag)
+  $("#cardGallery").append(nametag);
   // stores artist name as a variable
   var credit = $("<h5>").text("Artist: " + artwork.artist);
   // appends the Artist credit below the artwork's name
-  $("#cardGallery").append(credit)
-};
+  $("#cardGallery").append(credit);
+}
 
 //function to call giphy API
 function giphyArt(argument) {
@@ -144,9 +145,9 @@ function giphyArt(argument) {
       // appends the giphy image to the card gallery
       $("#cardGallery").append(artImage);
       //Adds the GIPHY's name to the element
-      giphyTitle.text("This is a GIPHY of " + response.data.title)
+      giphyTitle.text("This is a GIPHY of " + response.data.title);
       //Adds the title element to the page
-      $("giphyName").append(giphyTitle)
+      $("giphyName").append(giphyTitle);
       // console.log(response.title)
     });
 }
