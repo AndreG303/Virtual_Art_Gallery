@@ -135,6 +135,7 @@ function giphyArt(argument) {
     //data response from ajax request
     .then(function (response) {
       // saves the image in variable 
+      // console.log(response);
       var imageURL = response.data.image_original_url;
       // creates an image tag 
       var artImage = $("<img>");
@@ -147,7 +148,7 @@ function giphyArt(argument) {
       //Adds the GIPHY's name to the element
       giphyTitle.text("This is a GIPHY of " + response.data.title);
       //Adds the title element to the page
-      $("#cardGallery").append(giphyTitle);
-    });
 
+      $("#cardGallery").append(giphyTitle)
+  });
 }
