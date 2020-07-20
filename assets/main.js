@@ -147,7 +147,7 @@ function giphyArt(argument) {
       //Adds the GIPHY's name to the element
       giphyTitle.text("This is a GIPHY of " + response.data.title);
       //Adds the title element to the page
-      $("giphyName").append(giphyTitle);
-      // console.log(response.title)
+      $("#cardGallery").append(giphyTitle);
     });
+
 }
